@@ -1,6 +1,9 @@
 Game Of Life - Kata
 ===================
 
+Luis García Castro
+
+
 General installation instructions:
 
 Install build essentials:
