@@ -1,14 +1,27 @@
 <div>
-	<table>
-		<tbody>
-			<tr ng-repeat="row in matrix">
-				<td ng-repeat="col in row track by $index"
-				    class="textAligned whiteCell"
-				    ng-class="{ blackCell: col === '*' }">&nbsp;
-				</td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="buttonSection">
+		<div>
+			<button ng-click="initPatterns(0)">Block</button>
+			<button ng-click="initPatterns(1)">Blinker</button>
+			<button ng-click="initPatterns(2)">Toad</button>
+			<button ng-click="initPatterns(3)">Beacon</button>
+			<button ng-click="initPatterns(4)">Pulsar</button>
+			<button ng-click="initPatterns(5)">Pentadecathlon</button>
+		</div>
+		<div>
+			<button ng-click="initPatterns(6)">Glider</button>
+			<button ng-click="initPatterns(7)">Lightweight spaceship</button>
+		</div>
+		<div>
+			<button ng-click="initPatterns(8)">Complete</button>
+	</div>
+	<div class="container">
+		<div ng-repeat="row in matrix">
+			<span ng-repeat="col in row track by $index"
+				  class="cellOnTable whiteCell"
+				  ng-class="{ blackCell: col === '*' }"></span>
+		</div>
+	</div>
 </div>
 <div>
 	<button ng-click="nextGeneration()">Next State</button>

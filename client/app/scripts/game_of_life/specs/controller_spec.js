@@ -57,11 +57,10 @@ describe('Controller: game_of_life', function () {
           ['.','.','.','*','*','.','.','.'],
           ['.','.','.','.','.','.','.','.'] ]);
 
+      expect(scope.matrix).toBeDefined();
       expect(scope.validateNeighbors(matrix, { row : 0, col : 0 })).toBe(false);
       expect(scope.validateNeighbors(matrix, { row : 1, col : 1 })).toBe(false);
       expect(scope.validateNeighbors(matrix, { row : 1, col : 3 })).toBe(true);
-      //expect(scope.validateNeighbors(matrix, { row : 1, col : 4 })).toBe(true);
-      //expect(scope.validateNeighbors(matrix, { row : 1, col : 5 })).toBe(true);
 
     });
 
